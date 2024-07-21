@@ -1,2 +1,9 @@
-Input: jewels = "aA", stones = "aAAbbbb"
-Output: 3
+class Solution(object):
+    def numJewelsInStones(self, jewels, stones):
+        return sum(stones.count(i) for i in jewels)
+        """
+        :type jewels: str
+        :type stones: str
+        :rtype: int
+        """
+        
