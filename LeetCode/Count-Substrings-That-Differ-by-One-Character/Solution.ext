@@ -1,0 +1,10 @@
+Input: s = "aba", t = "baba"
+Output: 6
+Explanation: The following are the pairs of substrings from s and t that differ by exactly 1 character:
+("aba", "baba")
+("aba", "baba")
+("aba", "baba")
+("aba", "baba")
+("aba", "baba")
+("aba", "baba")
+The underlined portions are the substrings that are chosen from s and t.
