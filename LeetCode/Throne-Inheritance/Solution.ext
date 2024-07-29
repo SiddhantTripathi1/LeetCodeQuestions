@@ -1,0 +1,5 @@
+Successor(x, curOrder):
+    if x has no children or all of x's children are in curOrder:
+        if x is the king return null
+        else return Successor(x's parent, curOrder)
+    else return x's oldest child who's not in curOrder
