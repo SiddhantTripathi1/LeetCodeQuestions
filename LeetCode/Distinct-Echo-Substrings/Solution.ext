@@ -1,0 +1,3 @@
+Input: text = "abcabcabc"
+Output: 3
+Explanation: The 3 substrings are "abcabc", "bcabca" and "cabcab".
