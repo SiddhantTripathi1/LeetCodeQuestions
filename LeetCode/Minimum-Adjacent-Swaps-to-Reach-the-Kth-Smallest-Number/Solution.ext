@@ -1,0 +1,5 @@
+Input: num = "5489355142", k = 4
+Output: 2
+Explanation: The 4th smallest wonderful number is "5489355421". To get this number:
+- Swap index 7 with index 8: "5489355142" -> "5489355412"
+- Swap index 8 with index 9: "5489355412" -> "5489355421"
