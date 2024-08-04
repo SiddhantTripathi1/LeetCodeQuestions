@@ -1,3 +1,5 @@
-Input: allowed = "ab", words = ["ad","bd","aaab","baa","badab"]
-Output: 2
-Explanation: Strings "aaab" and "baa" are consistent since they only contain characters 'a' and 'b'.
+class Solution:
+    def countConsistentStrings(self, allowed: str, words: List[str]) -> int:
+        return sum(set(allowed) >= set(i) for i in words)
+
+        
