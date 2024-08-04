@@ -1,0 +1,2 @@
+Input: tickets = [["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]
+Output: ["JFK","MUC","LHR","SFO","SJC"]
