@@ -1,26 +1,7 @@
-class Solution(object):
-    def sortString(self, s):
-        out = ""
-        d = {}
-        for letter in s: d[letter]= d.get(letter,0)+1
-        st1 = sorted(list(set(s)))
-        st2 = st1[::-1]
-        flg = 1
-        while flg:
-            flg = 0
-            for letter in st1:
-                if d[letter]:
-                    flg = 1
-                    d[letter]-=1
-                    out+=letter
-            for letter in st2:
-                if d[letter]:
-                    flg = 1
-                    d[letter]-=1
-                    out+=letter
-        return out
-        """
-        :type s: str
-        :rtype: str
-        """
-        
+Input: s = "aaaabbbbcccc"
+Output: "abccbaabccba"
+Explanation: After steps 1, 2 and 3 of the first iteration, result = "abc"
+After steps 4, 5 and 6 of the first iteration, result = "abccba"
+First iteration is done. Now s = "aabbcc" and we go back to step 1
+After steps 1, 2 and 3 of the second iteration, result = "abccbaabc"
+After steps 4, 5 and 6 of the second iteration, result = "abccbaabccba"
