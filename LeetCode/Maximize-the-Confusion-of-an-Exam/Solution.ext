@@ -1,0 +1,4 @@
+Input: answerKey = "TTFF", k = 2
+Output: 4
+Explanation: We can replace both the 'F's with 'T's to make answerKey = "TTTT".
+There are four consecutive 'T's.
