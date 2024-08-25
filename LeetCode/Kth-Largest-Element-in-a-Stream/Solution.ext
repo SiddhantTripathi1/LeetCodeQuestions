@@ -1,13 +1,32 @@
-Input
-["KthLargest", "add", "add", "add", "add", "add"]
-[[3, [4, 5, 8, 2]], [3], [5], [10], [9], [4]]
-Output
-[null, 4, 5, 5, 8, 8]
+class KthLargest(object):
 
-Explanation
-KthLargest kthLargest = new KthLargest(3, [4, 5, 8, 2]);
-kthLargest.add(3);   // return 4
-kthLargest.add(5);   // return 5
-kthLargest.add(10);  // return 5
-kthLargest.add(9);   // return 8
-kthLargest.add(4);   // return 8
+    def __init__(self, k, nums):
+        self.nums = nums[:k]
+        self.k = k
+        heapify(self.nums)
+        for i in range(k, len(nums)):
+            if nums[i] > self.nums[0]:
+                heappushpop(self.nums, nums[i])
+        """
+        :type k: int
+        :type nums: List[int]
+        """
+        
+
+    def add(self, val):
+        if len(self.nums) < self.k:
+            heappush(self.nums, val)
+        elif val > self.nums[0]:
+            heapreplace(self.nums, val)
+        
+        return self.nums[0]
+        """
+        :type val: int
+        :rtype: int
+        """
+        
+
+
+# Your KthLargest object will be instantiated and called as such:
+# obj = KthLargest(k, nums)
+# param_1 = obj.add(val)
